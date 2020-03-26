@@ -2,6 +2,8 @@ const express = require('express');
 
 const routes = require('./routes');
 
+const cors = require('cors');
+
 /*  USANDO O KNEX, UM QUERY BUILDER PARA BANCOS SQL
 
     instalar:
@@ -19,6 +21,8 @@ const routes = require('./routes');
 */
 
 const app = express();
+
+app.use(cors()); //Permissão de quem pode acessar a API
 
 app.use(express.json());
 
